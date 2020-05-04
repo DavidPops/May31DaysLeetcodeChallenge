@@ -24,7 +24,7 @@ def bitwiseComplement(self, N: int) -> int:
     else:
         return 2**(int(math.log2(N))+1)-1 - N
 
-def bitwiseComplement(self, N: int) -> int:
+def bitwiseComplement2(self, N: int) -> int:
         # k bits = bit number necessary for num representation
         # Find first complement = biggest number that can be made with k bits - num
         bitNum = len(bin(N)[2:])
