@@ -1,4 +1,5 @@
 import collections
+import typing.List
 
 class MySolution:
     def majorityElement(self, nums: List[int]) -> int:
