@@ -9,7 +9,7 @@ class MySolution:
             if counter[elem] > len(nums)/2:
                 return elem
 
-class BoyerMooreVotingAlgorithmSolution:
+class BoyerMooreVotingAlgorithmSolution: # prefix and suffix stuff, count cant = -1, so algo is correct and valid
     def majorityElement(self, nums):
         count = 0
         candidate = None
@@ -20,6 +20,8 @@ class BoyerMooreVotingAlgorithmSolution:
             count += (1 if num == candidate else -1)
 
         return candidate
+# [7, 7, 5, 7, 5, 1 | 5, 7 | 5, 5, 7, 7 | 7, 7, 7, 7]
+bmSolution = BoyerMooreVotingAlgorithmSolution().majorityElement([7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 7, 7, 7, 7])
 
 class DivideAndConquerSolution:
     def majorityElement(self, nums, lo=0, hi=None):
@@ -45,6 +47,7 @@ class DivideAndConquerSolution:
             return left if left_count > right_count else right
 
         return majority_element_rec(0, len(nums)-1)
+dcSolution = DivideAndConquerSolution().majorityElement([7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 7, 7, 7, 7])
 
 import random
 

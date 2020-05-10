@@ -1,3 +1,4 @@
+import collections
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         dicts = collections.Counter(s)
